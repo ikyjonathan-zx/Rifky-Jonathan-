@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rifky Jonathan Tambuwun — Personal Profile</title>
+    
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        emerald: {
+                            50: '#ECFDF5',
+                            100: '#D1FAE5',
+                            200: '#A7F3D0',
+                            500: '#10B981',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065F46',
+                            900: '#064E3B',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Animasi Fade-in saat scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Pola latar belakang titik halus */
+        .bg-dot-pattern {
+            background-image: radial-gradient(#059669 0.75px, transparent 0.75px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-emerald-100 selection:text-emerald-900">
+
+    <!-- Navbar Sticky Minimalis -->
+    <header class="sticky top-0 z-40 w-full bg-white/85 backdrop-blur-md border-b border-emerald-100/80 transition-all">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo / Brand -->
+                <a href="#beranda" class="flex items-center gap-2.5 group">
+                    <span class="w-9 h-9 rounded-xl bg-emerald-600 text-white font-display font-bold text-sm flex items-center justify-center shadow-sm group-hover:bg-emerald-700 transition-colors">
+                        RJT
+                    </span>
+                    <span class="font-display font-bold text-slate-900 tracking-tight text-base sm:text-lg">
+                        Rifky<span class="text-emerald-600">.</span>
+                    </span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600">
+                    <a href="#beranda" class="hover:text-emerald-600 transition-colors py-1">Beranda</a>
+                    <a href="#tentang" class="hover:text-emerald-600 transition-colors py-1">Tentang Saya</a>
+                    <a href="#perjalanan" class="hover:text-emerald-600 transition-colors py-1">Perjalanan & Prestasi</a>
+                    <a href="#keahlian" class="hover:text-emerald-600 transition-colors py-1">Keahlian</a>
+                    <a href="#kontak" class="px-4 py-2 rounded-xl bg-emerald-50 text-emerald-700 font-semibold hover:bg-emerald-600 hover:text-white transition-all">
+                        Kontak
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" type="button" aria-label="Buka Menu" class="md:hidden p-2.5 rounded-xl text-slate-600 hover:text-emerald-700 hover:bg-emerald-50 transition-colors">
+                    <i data-lucide="menu" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-emerald-100 px-4 pt-2 pb-5 space-y-1 shadow-lg">
+            <a href="#beranda" class="mobile-link block px-3.5 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:bg-emerald-50 hover:text-emerald-700">Beranda</a>
+            <a href="#tentang" class="mobile-link block px-3.5 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:bg-emerald-50 hover:text-emerald-700">Tentang Saya</a>
+            <a href="#perjalanan" class="mobile-link block px-3.5 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:bg-emerald-50 hover:text-emerald-700">Perjalanan & Prestasi</a>
+            <a href="#keahlian" class="mobile-link block px-3.5 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:bg-emerald-50 hover:text-emerald-700">Keahlian</a>
+            <a href="#kontak" class="mobile-link block px-3.5 py-2.5 rounded-xl text-sm font-semibold text-emerald-700 bg-emerald-50 mt-2">Hubungi Saya</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. HERO SECTION -->
+        <section id="beranda" class="relative overflow-hidden pt-14 pb-20 sm:pt-24 sm:pb-28">
+            <!-- Dekorasi Latar Halus -->
+            <div class="absolute inset-0 bg-dot-pattern opacity-[0.04] pointer-events-none"></div>
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-emerald-100/60 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute top-1/2 -left-24 w-72 h-72 bg-emerald-50 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
+                    
+                    <!-- Kolom Teks Hero -->
+                    <div class="flex-1 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/70 text-emerald-800 text-xs font-semibold tracking-wide mb-6">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                            Profil Personal & Portofolio
+                        </div>
+
+                        <h1 class="font-display text-3xl sm:text-5xl lg:text-[3.25rem] font-extrabold text-slate-900 tracking-tight leading-[1.15] mb-4">
+                            Rifky Jonathan <span class="text-emerald-600">Tambuwun</span>
+                        </h1>
+
+                        <p class="text-base sm:text-lg text-slate-600 font-medium max-w-xl mx-auto lg:mx-0 leading-relaxed mb-7">
+                            Pemimpin Muda, Penggiat Media &amp; Pelayanan, serta Antusias Sains
+                        </p>
+
+                        <!-- Info Singkat (TTL & Domisili) -->
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-5 text-sm text-slate-600 mb-9">
+                            <div class="flex items-center gap-2 bg-slate-50 px-3.5 py-2 rounded-xl border border-slate-100">
+                                <i data-lucide="calendar" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                                <span>Tomohon, 04 September 2007</span>
+                            </div>
+                            <div class="flex items-center gap-2 bg-slate-50 px-3.5 py-2 rounded-xl border border-slate-100">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                                <span>Minahasa, Sulawesi Utara</span>
+                            </div>
+                        </div>
+
+                        <!-- Tombol CTA -->
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3.5">
+                            <a href="#tentang" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-emerald-600 text-white font-semibold text-sm shadow-sm shadow-emerald-600/20 hover:bg-emerald-700 hover:-translate-y-0.5 transition-all">
+                                <span>Tentang Saya</span>
+                                <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                            </a>
+                            <a href="#kontak" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white text-emerald-800 border border-emerald-200 font-semibold text-sm hover:bg-emerald-50 hover:border-emerald-300 transition-all">
+                                <i data-lucide="send" class="w-4 h-4 text-emerald-600"></i>
+                                <span>Hubungi Saya</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Kolom Avatar Interaktif -->
+                    <div class="shrink-0 flex flex-col items-center">
+                        <div class="relative group">
+                            <!-- Cincin Dekoratif -->
+                            <div class="absolute -inset-2 rounded-full bg-gradient-to-tr from-emerald-600 via-emerald-400 to-emerald-100 opacity-30 blur-sm group-hover:opacity-50 transition-opacity"></div>
+                            
+                            <!-- Lingkaran Avatar -->
+                            <div class="relative w-44 h-44 sm:w-52 sm:h-52 rounded-full bg-gradient-to-br from-emerald-50 via-white to-emerald-100 border-4 border-white shadow-xl flex items-center justify-center overflow-hidden">
+                                <!-- Monogram Default -->
+                                <div id="avatar-initials" class="flex flex-col items-center justify-center select-none">
+                                    <span class="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-emerald-800">
+                                        RJT
+                                    </span>
+                                    <span class="mt-1.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-emerald-600">
+                                        Tomohon • 2007
+                                    </span>
+                                </div>
+
+                                <!-- Gambar Unggahan Lokal (Tersembunyi secara default) -->
+                                <img id="avatar-preview" src="" alt="Foto Profil Rifky Jonathan Tambuwun" class="hidden w-full h-full object-cover">
+
+                                <!-- Overlay Unggah Foto -->
+                                <label for="avatar-upload" class="absolute inset-0 bg-emerald-950/60 text-white opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center cursor-pointer p-4 text-center">
+                                    <i data-lucide="camera" class="w-6 h-6 mb-1.5 text-emerald-300"></i>
+                                    <span class="text-xs font-medium leading-tight">Ganti Foto Profil</span>
+                                </label>
+                                <input type="file" id="avatar-upload" accept="image/*" class="hidden">
+                            </div>
+
+                            <!-- Tombol Reset Foto (Muncul jika foto sudah diunggah) -->
+                            <button id="reset-avatar-btn" type="button" title="Kembali ke Inisial RJT" class="hidden absolute -bottom-1 -right-1 w-9 h-9 rounded-full bg-white text-slate-600 hover:text-red-600 border border-slate-200 shadow-md items-center justify-center transition-colors">
+                                <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                        <span class="mt-3 text-xs text-slate-400">Klik foto untuk pratinjau gambar</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. BAGIAN TENTANG SAYA (ABOUT ME) -->
+        <section id="tentang" class="py-16 sm:py-24 bg-emerald-50/40 border-y border-emerald-100/70">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+                <div class="text-center mb-10 sm:mb-12">
+                    <span class="text-xs font-bold uppercase tracking-widest text-emerald-600">Mengenal Lebih Dekat</span>
+                    <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 mt-2">Tentang Saya</h2>
+                    <div class="w-12 h-1 bg-emerald-500 rounded-full mx-auto mt-3"></div>
+                </div>
+
+                <!-- Kartu Narasi Utama -->
+                <div class="bg-white rounded-3xl p-6 sm:p-10 md:p-12 shadow-sm border border-emerald-100 relative overflow-hidden">
+                    <!-- Aksen Garis Kiri Emerald -->
+                    <div class="absolute top-0 left-0 bottom-0 w-1.5 bg-gradient-to-b from-emerald-500 to-emerald-700"></div>
+
+                    <div class="space-y-6 text-slate-700 text-base sm:text-[1.05rem] leading-[1.85] text-justify sm:text-left">
+                        <p>
+                            Halo! Perkenalkan, saya <strong class="font-semibold text-slate-900">Rifky Jonathan Tambuwun</strong>, lahir di Tomohon pada 04 September 2007. Sebagai anak muda yang tumbuh di Kota Tomohon, saya selalu percaya bahwa masa muda adalah waktu terbaik untuk terus belajar, aktif bertumbuh, dan memberikan kontribusi positif bagi lingkungan sekitar. Perjalanan saya dalam dunia organisasi mulai terasah secara nyata saat dipercaya mengemban tugas sebagai <span class="text-emerald-800 font-medium">Koordinator Bidang Pelayanan SMA Negeri 1 Tomohon</span> masa bakti 2024–2025. Dari pengalaman di lingkungan sekolah tersebut, saya belajar banyak tentang kerja sama tim, kedisiplinan, serta bagaimana merancang kegiatan yang bermanfaat bagi sesama pelajar.
+                        </p>
+
+                        <p>
+                            Langkah tersebut kemudian membawa saya bertumbuh ke ruang lingkup yang lebih luas di tingkat kota. Pada masa bakti 2025–2026, saya dipercaya menjabat sebagai <span class="text-emerald-800 font-medium">Koordinator Bidang Pelayanan Umum dan Media Center Pelayanan Siswa Kristen Kota Tomohon</span>, di mana saya banyak terlibat dalam koordinasi program pelayanan sekaligus pengelolaan informasi dan media komunikasi. Kepercayaan serta proses belajar yang terus berjalan akhirnya mengantarkan saya pada tanggung jawab yang lebih besar, yaitu mengemban amanah sebagai <span class="text-emerald-800 font-medium">Wakil Ketua Pelayanan Siswa Kristen Kota Tomohon</span> dari tahun 2026 hingga saat ini. Peran ini melatih saya untuk semakin sigap dalam memimpin, membangun komunikasi yang baik dengan banyak orang, dan memastikan setiap rencana berjalan dengan tertata.
+                        </p>
+
+                        <p>
+                            Di samping kesibukan berorganisasi dan melayani, saya juga memiliki ketertarikan yang besar di bidang ilmu pengetahuan dan eksplorasi akademik. Rasa ingin tahu serta ketekunan dalam belajar membawa saya meraih <span class="text-emerald-800 font-medium">Juara 4 Olimpiade Sains Nasional Tingkat Kabupaten/Kota Bidang Biologi</span> pada tahun 2023, dan kembali berprestasi dengan meraih <span class="text-emerald-800 font-medium">Juara 5 Olimpiade Sains Nasional Tingkat Kabupaten/Kota Bidang Astronomi</span> pada tahun 2024. Bagi saya, perpaduan antara pengalaman organisasi, pengelolaan media center, dan ketertarikan pada dunia sains membentuk cara berpikir yang seimbang—menjadikan saya pribadi yang teliti terhadap detail, komunikatif, terbuka pada hal-hal baru, dan selalu antusias menghadapi setiap tantangan ke depan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. REKAM JEJAK ORGANISASI & PRESTASI -->
+        <section id="perjalanan" class="py-16 sm:py-24 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+                <div class="text-center mb-12 sm:mb-14">
+                    <span class="text-xs font-bold uppercase tracking-widest text-emerald-600">Dedikasi & Pencapaian</span>
+                    <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 mt-2">Perjalanan Organisasi &amp; Prestasi</h2>
+                    <div class="w-12 h-1 bg-emerald-500 rounded-full mx-auto mt-3"></div>
+                </div>
+
+                <!-- Timeline Vertikal -->
+                <div class="relative border-l-2 border-emerald-200 ml-3.5 sm:ml-6 space-y-8">
+                    
+                    <!-- Item 1 -->
+                    <div class="relative pl-7 sm:pl-10 group">
+                        <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-emerald-600 ring-4 ring-emerald-50 group-hover:scale-125 transition-transform"></span>
+                        <div class="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/80 shadow-sm hover:border-emerald-300 hover:shadow-md transition-all">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-600 text-white">
+                                    2026 – Sekarang
+                                </span>
+                                <span class="text-xs font-medium text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-lg">Kepemimpinan Kota</span>
+                            </div>
+                            <h3 class="font-display text-lg font-bold text-slate-900">
+                                Wakil Ketua Pelayanan Siswa Kristen Kota Tomohon
+                            </h3>
+                            <p class="text-sm text-slate-600 mt-1.5 leading-relaxed">
+                                Memimpin koordinasi strategis tingkat kota, membangun sinergi lintas pelajar, dan memastikan program pelayanan berjalan tertata.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="relative pl-7 sm:pl-10 group">
+                        <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-emerald-500 ring-4 ring-emerald-50 group-hover:scale-125 transition-transform"></span>
+                        <div class="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/80 shadow-sm hover:border-emerald-300 hover:shadow-md transition-all">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200">
+                                    2025 – 2026
+                                </span>
+                                <span class="text-xs font-medium text-slate-500">Organisasi &amp; Media</span>
+                            </div>
+                            <h3 class="font-display text-lg font-bold text-slate-900">
+                                Koordinator Bidang Pelayanan Umum dan Media Center Pelayanan Siswa Kristen Kota Tomohon
+                            </h3>
+                            <p class="text-sm text-slate-600 mt-1.5 leading-relaxed">
+                                Mengoordinasikan program pelayanan umum sekaligus mengelola publikasi informasi serta media komunikasi organisasi.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="relative pl-7 sm:pl-10 group">
+                        <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-emerald-500 ring-4 ring-emerald-50 group-hover:scale-125 transition-transform"></span>
+                        <div class="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/80 shadow-sm hover:border-emerald-300 hover:shadow-md transition-all">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200">
+                                    2024 – 2025
+                                </span>
+                                <span class="text-xs font-medium text-slate-500">Organisasi Sekolah</span>
+                            </div>
+                            <h3 class="font-display text-lg font-bold text-slate-900">
+                                Koordinator Bidang Pelayanan SMA Negeri 1 Tomohon
+                            </h3>
+                            <p class="text-sm text-slate-600 mt-1.5 leading-relaxed">
+                                Menginisiasi dan mengoordinasikan kegiatan kerohanian serta pelayanan sosial yang bermanfaat bagi lingkungan pelajar sekolah.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 (Prestasi) -->
+                    <div class="relative pl-7 sm:pl-10 group">
+                        <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-amber-500 ring-4 ring-amber-50 group-hover:scale-125 transition-transform"></span>
+                        <div class="bg-gradient-to-r from-emerald-50/50 to-white rounded-2xl p-5 sm:p-6 border border-emerald-100 shadow-sm hover:border-emerald-300 hover:shadow-md transition-all">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-900">
+                                    <i data-lucide="award" class="w-3.5 h-3.5 text-emerald-700"></i>
+                                    2024 • Prestasi Sains
+                                </span>
+                                <span class="text-xs font-medium text-emerald-700">OSN-K</span>
+                            </div>
+                            <h3 class="font-display text-lg font-bold text-slate-900">
+                                Juara 5 Olimpiade Sains Nasional (OSN) Tingkat Kabupaten/Kota – Bidang Astronomi
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 (Prestasi) -->
+                    <div class="relative pl-7 sm:pl-10 group">
+                        <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-amber-500 ring-4 ring-amber-50 group-hover:scale-125 transition-transform"></span>
+                        <div class="bg-gradient-to-r from-emerald-50/50 to-white rounded-2xl p-5 sm:p-6 border border-emerald-100 shadow-sm hover:border-emerald-300 hover:shadow-md transition-all">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-900">
+                                    <i data-lucide="award" class="w-3.5 h-3.5 text-emerald-700"></i>
+                                    2023 • Prestasi Sains
+                                </span>
+                                <span class="text-xs font-medium text-emerald-700">OSN-K</span>
+                            </div>
+                            <h3 class="font-display text-lg font-bold text-slate-900">
+                                Juara 4 Olimpiade Sains Nasional (OSN) Tingkat Kabupaten/Kota – Bidang Biologi
+                            </h3>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. MINAT & KEAHLIAN -->
+        <section id="keahlian" class="py-16 sm:py-24 bg-emerald-50/40 border-y border-emerald-100/70">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+                <div class="text-center mb-12">
+                    <span class="text-xs font-bold uppercase tracking-widest text-emerald-600">Kompetensi & Fokus</span>
+                    <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 mt-2">Minat &amp; Keahlian</h2>
+                    <div class="w-12 h-1 bg-emerald-500 rounded-full mx-auto mt-3"></div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                    <!-- Kartu 1: Pengembangan Diri -->
+                    <div class="bg-white rounded-2xl p-6 border border-emerald-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                            <i data-lucide="trending-up" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-display text-lg font-bold text-slate-900 mb-2">Pengembangan Diri</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Terus mengasah kapasitas kepemimpinan, kedisiplinan, serta pola pikir bertumbuh dalam setiap tanggung jawab.
+                        </p>
+                    </div>
+
+                    <!-- Kartu 2: Kreativitas -->
+                    <div class="bg-white rounded-2xl p-6 border border-emerald-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                            <i data-lucide="sparkles" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-display text-lg font-bold text-slate-900 mb-2">Kreativitas</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Merancang gagasan kegiatan yang segar dan penyampaian pesan visual maupun komunikasi yang menarik.
+                        </p>
+                    </div>
+
+                    <!-- Kartu 3: Teknologi Digital -->
+                    <div class="bg-white rounded-2xl p-6 border border-emerald-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                            <i data-lucide="laptop" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-display text-lg font-bold text-slate-900 mb-2">Teknologi Digital</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Berpengalaman mengelola Media Center, sistem informasi digital, serta adaptif terhadap perkembangan teknologi.
+                        </p>
+                    </div>
+
+                    <!-- Kartu 4: Komunikasi & Kolaborasi -->
+                    <div class="bg-white rounded-2xl p-6 border border-emerald-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                            <i data-lucide="users" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-display text-lg font-bold text-slate-900 mb-2">Komunikasi &amp; Kolaborasi</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Membangun relasi harmonis, kerja sama tim yang solid, dan koordinasi efektif di berbagai lingkungan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. HUBUNGI SAYA (CONTACT) -->
+        <section id="kontak" class="py-16 sm:py-24 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+                <div class="bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-900 rounded-3xl p-8 sm:p-12 text-white shadow-xl relative overflow-hidden">
+                    <!-- Aksen Lingkaran Dekoratif -->
+                    <div class="absolute -right-16 -top-16 w-64 h-64 rounded-full bg-emerald-500/20 blur-2xl pointer-events-none"></div>
+                    <div class="absolute -left-16 -bottom-16 w-64 h-64 rounded-full bg-emerald-400/10 blur-2xl pointer-events-none"></div>
+
+                    <div class="relative z-10 text-center max-w-xl mx-auto mb-10">
+                        <span class="inline-block px-3 py-1 rounded-full bg-emerald-700/70 text-emerald-200 text-xs font-semibold tracking-wider uppercase mb-3">
+                            Mari Terhubung
+                        </span>
+                        <h2 class="font-display text-2xl sm:text-3xl font-bold text-white">
+                            Hubungi Saya
+                        </h2>
+                        <p class="text-emerald-100/90 text-sm sm:text-base mt-2.5 leading-relaxed">
+                            Terbuka untuk diskusi, kolaborasi kegiatan, maupun bertukar pikiran seputar organisasi, media, dan sains.
+                        </p>
+                    </div>
+
+                    <!-- Kartu Kontak -->
+                    <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
+                        <!-- Instagram Card -->
+                        <a href="https://instagram.com/joonazxt" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-5 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/15 backdrop-blur-sm transition-all group">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-white text-emerald-800 flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
+                                    <i data-lucide="instagram" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-medium text-emerald-200">Instagram</p>
+                                    <p class="font-display font-bold text-base sm:text-lg text-white">@joonazxt</p>
+                                </div>
+                            </div>
+                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-emerald-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                        </a>
+
+                        <!-- Email Card -->
+                        <div class="flex items-center justify-between p-5 rounded-2xl bg-white text-slate-900 shadow-sm">
+                            <a href="mailto:rifkytambuwun@gmail.com" class="flex items-center gap-3.5 min-w-0 flex-1 group">
+                                <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                                    <i data-lucide="mail" class="w-6 h-6"></i>
+                                </div>
+                                <div class="min-w-0">
+                                    <p class="text-xs font-medium text-slate-500">Email</p>
+                                    <p class="font-display font-bold text-sm sm:text-base text-slate-900 truncate group-hover:text-emerald-700 transition-colors">
+                                        rifkytambuwun@gmail.com
+                                    </p>
+                                </div>
+                            </a>
+                            <button id="copy-email-btn" type="button" title="Salin alamat email" class="ml-2 p-2.5 rounded-xl bg-emerald-50 text-emerald-700 hover:bg-emerald-600 hover:text-white transition-colors shrink-0 flex items-center gap-1.5 text-xs font-semibold">
+                                <i data-lucide="copy" class="w-4 h-4"></i>
+                                <span class="hidden sm:inline">Salin</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Sederhana -->
+    <footer class="bg-white border-t border-slate-100 py-8">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+            <p class="font-medium text-slate-600">
+                &copy; 2026 Rifky Jonathan Tambuwun
+            </p>
+            <p class="text-xs text-slate-400">
+                Minahasa, Sulawesi Utara • Indonesia
+            </p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification (Untuk Salin Email) -->
+    <div id="toast" role="status" aria-live="polite" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 pointer-events-none transition-all duration-300">
+        <div class="flex items-center gap-3 px-4 py-3 rounded-xl bg-emerald-900 text-white shadow-lg border border-emerald-700">
+            <div class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-300 flex items-center justify-center">
+                <i data-lucide="check" class="w-4 h-4"></i>
+            </div>
+            <span class="text-sm font-medium">Email berhasil disalin!</span>
+        </div>
+    </div>
+
+    <!-- Script Interaktivitas -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Inisialisasi ikon Lucide
+            lucide.createIcons();
+
+            // 1. Toggle Menu Mobile
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // 2. Fitur Unggah Foto Profil Lokal pada Avatar
+            const avatarUpload = document.getElementById('avatar-upload');
+            const avatarPreview = document.getElementById('avatar-preview');
+            const avatarInitials = document.getElementById('avatar-initials');
+            const resetAvatarBtn = document.getElementById('reset-avatar-btn');
+
+            avatarUpload.addEventListener('change', (event) => {
+                const file = event.target.files[0];
+                if (file && file.type.startsWith('image/')) {
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                        avatarPreview.src = e.target.result;
+                        avatarPreview.classList.remove('hidden');
+                        avatarInitials.classList.add('hidden');
+                        resetAvatarBtn.classList.remove('hidden');
+                        resetAvatarBtn.classList.add('flex');
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            resetAvatarBtn.addEventListener('click', () => {
+                avatarUpload.value = '';
+                avatarPreview.src = '';
+                avatarPreview.classList.add('hidden');
+                avatarInitials.classList.remove('hidden');
+                resetAvatarBtn.classList.add('hidden');
+                resetAvatarBtn.classList.remove('flex');
+            });
+
+            // 3. Salin Email Cepat + Notifikasi Toast
+            const copyEmailBtn = document.getElementById('copy-email-btn');
+            const toast = document.getElementById('toast');
+            const emailText = 'rifkytambuwun@gmail.com';
+            let toastTimeout;
+
+            function showToast() {
+                clearTimeout(toastTimeout);
+                toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+                toast.classList.add('translate-y-0', 'opacity-100');
+
+                toastTimeout = setTimeout(() => {
+                    toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+                    toast.classList.remove('translate-y-0', 'opacity-100');
+                }, 3000);
+            }
+
+            copyEmailBtn.addEventListener('click', () => {
+                // Menggunakan fallback execCommand agar kompatibel di dalam iframe maupun browser modern
+                const tempInput = document.createElement('input');
+                tempInput.value = emailText;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                tempInput.setSelectionRange(0, 99999);
+                
+                try {
+                    document.execCommand('copy');
+                    showToast();
+                } catch (err) {
+                    if (navigator.clipboard) {
+                        navigator.clipboard.writeText(emailText).then(showToast);
+                    }
+                }
+                document.body.removeChild(tempInput);
+            });
+
+            // 4. Animasi Fade-In Saat Scroll (Intersection Observer)
+            const revealElements = document.querySelectorAll('.reveal');
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.12,
+                rootMargin: '0px 0px -40px 0px'
+            });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+        });
+    </script>
+</body>
+</html>
