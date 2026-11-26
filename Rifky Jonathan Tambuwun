@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rifky Jonathan Tambuwun — Profil Pribadi</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        forest: {
+                            850: '#042f24',
+                            900: '#022c22',
+                            950: '#011c16',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-stone-50 text-slate-800 antialiased selection:bg-emerald-600 selection:text-white">
+
+    <!-- Navbar Sticky -->
+    <header class="sticky top-0 z-50 bg-forest-950/90 backdrop-blur-md border-b border-emerald-900/50 transition-all duration-300">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo / Brand -->
+                <a href="#" class="flex items-center gap-2.5 group">
+                    <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center text-white font-display font-bold text-sm shadow-md shadow-emerald-950/50 group-hover:scale-105 transition-transform">
+                        RJT
+                    </div>
+                    <span class="font-display font-bold text-white tracking-tight text-base sm:text-lg">
+                        Rifky<span class="text-emerald-400">.</span>
+                    </span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-emerald-100/80">
+                    <a href="#tentang" class="hover:text-emerald-400 transition-colors">Tentang</a>
+                    <a href="#perjalanan" class="hover:text-emerald-400 transition-colors">Perjalanan & Prestasi</a>
+                    <a href="#keahlian" class="hover:text-emerald-400 transition-colors">Minat & Keahlian</a>
+                    <a href="#kontak" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition-all shadow-sm">
+                        Kontak
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" aria-label="Buka Menu" class="md:hidden p-2 rounded-xl text-emerald-100 hover:bg-emerald-900/60 transition-colors">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-forest-900 border-b border-emerald-800/60 px-4 pt-2 pb-5 space-y-2">
+            <a href="#tentang" class="mobile-link block px-3 py-2.5 rounded-xl text-sm font-medium text-emerald-100 hover:bg-emerald-800/50 hover:text-white transition-colors">Tentang</a>
+            <a href="#perjalanan" class="mobile-link block px-3 py-2.5 rounded-xl text-sm font-medium text-emerald-100 hover:bg-emerald-800/50 hover:text-white transition-colors">Perjalanan & Prestasi</a>
+            <a href="#keahlian" class="mobile-link block px-3 py-2.5 rounded-xl text-sm font-medium text-emerald-100 hover:bg-emerald-800/50 hover:text-white transition-colors">Minat & Keahlian</a>
+            <a href="#kontak" class="mobile-link block px-3 py-2.5 rounded-xl text-sm font-semibold bg-emerald-600 text-white text-center mt-2">Hubungi Saya</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-forest-950 via-forest-900 to-emerald-900 text-white pt-16 pb-20 sm:pt-24 sm:pb-28">
+        <!-- Decorative Ambient Glow -->
+        <div class="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-96 h-96 bg-emerald-500/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/4 w-80 h-80 bg-emerald-400/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                <!-- Minimalist Avatar / Initials Badge -->
+                <div class="shrink-0">
+                    <div class="relative w-32 h-32 sm:w-40 sm:h-40 rounded-3xl bg-gradient-to-tr from-emerald-800 to-emerald-500 p-1 shadow-2xl shadow-forest-950/80">
+                        <div class="w-full h-full rounded-[20px] bg-forest-950 flex flex-col items-center justify-center border border-emerald-400/20">
+                            <span class="font-display font-extrabold text-4xl sm:text-5xl tracking-tight bg-gradient-to-br from-white to-emerald-300 bg-clip-text text-transparent">
+                                RJT
+                            </span>
+                            <span class="text-[11px] uppercase tracking-widest text-emerald-400/80 mt-1 font-medium">
+                                Tomohon • ID
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Text Content -->
+                <div class="text-center md:text-left flex-1">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-400/30 text-emerald-300 text-xs sm:text-sm font-medium mb-5">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        Wakil Ketua Pelayanan Siswa Kristen Kota Tomohon
+                    </div>
+
+                    <h1 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight text-white leading-tight mb-4">
+                        Rifky Jonathan Tambuwun
+                    </h1>
+
+                    <!-- Quick Metadata Badges -->
+                    <div class="flex flex-wrap items-center justify-center md:justify-start gap-3 sm:gap-5 text-sm text-emerald-100/85 mb-8">
+                        <div class="flex items-center gap-2 bg-white/5 px-3.5 py-1.5 rounded-xl border border-white/10">
+                            <i data-lucide="calendar" class="w-4 h-4 text-emerald-400"></i>
+                            <span>Tomohon, 04 September 2007</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-white/5 px-3.5 py-1.5 rounded-xl border border-white/10">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-emerald-400"></i>
+                            <span>Minahasa, Sulawesi Utara</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-wrap items-center justify-center md:justify-start gap-3.5">
+                        <a href="#kontak" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-forest-950 font-display font-bold text-sm transition-all shadow-lg shadow-emerald-950/50 hover:-translate-y-0.5">
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                            Hubungi Saya
+                        </a>
+                        <a href="#tentang" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/10 hover:bg-white/15 text-white border border-white/15 font-medium text-sm transition-all">
+                            Kenali Lebih Dekat
+                            <i data-lucide="arrow-down" class="w-4 h-4 text-emerald-300"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Container -->
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 space-y-24">
+
+        <!-- Section 1: Tentang Saya -->
+        <section id="tentang" class="scroll-mt-24 reveal-section opacity-0 translate-y-6 transition-all duration-700">
+            <div class="flex items-center gap-3 mb-3">
+                <span class="h-1 w-8 rounded-full bg-emerald-600"></span>
+                <span class="text-xs font-bold uppercase tracking-widest text-emerald-700">Profil & Cerita</span>
+            </div>
+            <h2 class="font-display font-bold text-2xl sm:text-3xl text-forest-950 mb-8">
+                Tentang Saya
+            </h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <!-- Biodata Card (Left / Top on mobile) -->
+                <div class="lg:col-span-4 bg-white rounded-2xl p-6 border border-emerald-900/10 shadow-sm space-y-5">
+                    <div class="flex items-center gap-3 pb-4 border-b border-slate-100">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center">
+                            <i data-lucide="user-check" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-forest-950 text-base">Biodata Singkat</h3>
+                            <p class="text-xs text-slate-500">Informasi Personal</p>
+                        </div>
+                    </div>
+
+                    <ul class="space-y-4 text-sm">
+                        <li>
+                            <span class="block text-xs text-slate-400 font-medium mb-0.5">Nama Lengkap</span>
+                            <span class="font-semibold text-slate-800">Rifky Jonathan Tambuwun</span>
+                        </li>
+                        <li>
+                            <span class="block text-xs text-slate-400 font-medium mb-0.5">Tempat, Tanggal Lahir</span>
+                            <span class="font-semibold text-slate-800">Tomohon, 04 September 2007</span>
+                        </li>
+                        <li>
+                            <span class="block text-xs text-slate-400 font-medium mb-0.5">Domisili</span>
+                            <span class="font-semibold text-slate-800">Minahasa, Sulawesi Utara</span>
+                        </li>
+                        <li>
+                            <span class="block text-xs text-slate-400 font-medium mb-0.5">Amanah Saat Ini</span>
+                            <span class="inline-block mt-1 px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-800 font-semibold text-xs border border-emerald-200/70">
+                                Wakil Ketua Pelayanan Siswa Kristen Kota Tomohon
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 3 Narrative Paragraphs -->
+                <div class="lg:col-span-8 bg-white rounded-2xl p-6 sm:p-8 border border-emerald-900/10 shadow-sm space-y-5 text-slate-600 leading-relaxed text-[15px] sm:text-base">
+                    <p>
+                        Halo! Perkenalkan, saya <strong class="text-forest-900 font-semibold">Rifky Jonathan Tambuwun</strong>, lahir di Tomohon pada 04 September 2007. Sebagai anak muda yang tumbuh di Kota Tomohon, saya selalu percaya bahwa masa muda adalah waktu terbaik untuk terus belajar, aktif bertumbuh, dan memberikan kontribusi positif bagi lingkungan sekitar. Perjalanan saya dalam dunia organisasi mulai terasah secara nyata saat dipercaya mengemban tugas sebagai <strong class="text-emerald-800 font-medium">Koordinator Bidang Pelayanan SMA Negeri 1 Tomohon masa bakti 2024–2025</strong>. Dari pengalaman di lingkungan sekolah tersebut, saya belajar banyak tentang kerja sama tim, kedisiplinan, serta bagaimana merancang kegiatan yang bermanfaat bagi sesama pelajar.
+                    </p>
+                    <p>
+                        Langkah tersebut kemudian membawa saya bertumbuh ke ruang lingkup yang lebih luas di tingkat kota. Pada masa bakti 2025–2026, saya dipercaya menjabat sebagai <strong class="text-emerald-800 font-medium">Koordinator Bidang Pelayanan Umum dan Media Center Pelayanan Siswa Kristen Kota Tomohon</strong>, di mana saya banyak terlibat dalam koordinasi program pelayanan sekaligus pengelolaan informasi dan media komunikasi. Kepercayaan serta proses belajar yang terus berjalan akhirnya mengantarkan saya pada tanggung jawab yang lebih besar, yaitu mengemban amanah sebagai <strong class="text-emerald-800 font-medium">Wakil Ketua Pelayanan Siswa Kristen Kota Tomohon dari tahun 2026 hingga saat ini</strong>. Peran ini melatih saya untuk semakin sigap dalam memimpin, membangun komunikasi yang baik dengan banyak orang, dan memastikan setiap rencana berjalan dengan tertata.
+                    </p>
+                    <p>
+                        Di samping kesibukan berorganisasi dan melayani, saya juga memiliki ketertarikan yang besar di bidang ilmu pengetahuan dan eksplorasi akademik. Rasa ingin tahu serta ketekunan dalam belajar membawa saya meraih <strong class="text-forest-900 font-medium">Juara 4 Olimpiade Sains Nasional Tingkat Kabupaten/Kota Bidang Biologi pada tahun 2023</strong>, dan kembali berprestasi dengan meraih <strong class="text-forest-900 font-medium">Juara 5 Olimpiade Sains Nasional Tingkat Kabupaten/Kota Bidang Astronomi pada tahun 2024</strong>. Bagi saya, perpaduan antara pengalaman organisasi, pengelolaan media center, dan ketertarikan pada dunia sains membentuk cara berpikir yang seimbang—menjadikan saya pribadi yang teliti terhadap detail, komunikatif, terbuka pada hal-hal baru, dan selalu antusias menghadapi setiap tantangan ke depan.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Jejak Organisasi & Prestasi -->
+        <section id="perjalanan" class="scroll-mt-24 reveal-section opacity-0 translate-y-6 transition-all duration-700">
+            <div class="flex items-center gap-3 mb-3">
+                <span class="h-1 w-8 rounded-full bg-emerald-600"></span>
+                <span class="text-xs font-bold uppercase tracking-widest text-emerald-700">Rekam Jejak</span>
+            </div>
+            <h2 class="font-display font-bold text-2xl sm:text-3xl text-forest-950 mb-8">
+                Jejak Organisasi & Prestasi
+            </h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Kolom 1: Pengalaman Organisasi -->
+                <div class="bg-white rounded-2xl p-6 sm:p-7 border border-emerald-900/10 shadow-sm">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-900 text-emerald-300 flex items-center justify-center">
+                            <i data-lucide="users" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-lg text-forest-950">Kepemimpinan & Organisasi</h3>
+                    </div>
+
+                    <div class="relative pl-6 border-l-2 border-emerald-200 space-y-7">
+                        <!-- Item 1 -->
+                        <div class="relative">
+                            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-emerald-600 ring-4 ring-emerald-100"></span>
+                            <span class="inline-block px-2.5 py-0.5 rounded-md bg-emerald-600 text-white text-xs font-semibold mb-1.5">
+                                2026 – Sekarang
+                            </span>
+                            <h4 class="font-display font-bold text-forest-950 text-base">
+                                Wakil Ketua Pelayanan Siswa Kristen Kota Tomohon
+                            </h4>
+                            <p class="text-sm text-slate-600 mt-1">
+                                Memimpin koordinasi strategis pelayanan tingkat kota, membangun komunikasi lintas pelajar, serta memastikan tata kelola program berjalan efektif.
+                            </p>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="relative">
+                            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-emerald-400 ring-4 ring-emerald-50"></span>
+                            <span class="inline-block px-2.5 py-0.5 rounded-md bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs font-semibold mb-1.5">
+                                2025 – 2026
+                            </span>
+                            <h4 class="font-display font-bold text-forest-950 text-base">
+                                Koordinator Bidang Pelayanan Umum & Media Center
+                            </h4>
+                            <p class="text-xs font-medium text-emerald-700 mb-1">Pelayanan Siswa Kristen Kota Tomohon</p>
+                            <p class="text-sm text-slate-600">
+                                Mengoordinasikan program pelayanan umum sekaligus mengelola arus informasi, publikasi, dan media komunikasi organisasi.
+                            </p>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="relative">
+                            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-emerald-300 ring-4 ring-emerald-50"></span>
+                            <span class="inline-block px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 text-xs font-semibold mb-1.5">
+                                2024 – 2025
+                            </span>
+                            <h4 class="font-display font-bold text-forest-950 text-base">
+                                Koordinator Bidang Pelayanan
+                            </h4>
+                            <p class="text-xs font-medium text-emerald-700 mb-1">SMA Negeri 1 Tomohon</p>
+                            <p class="text-sm text-slate-600">
+                                Merancang dan menjalankan kegiatan pelayanan bagi pelajar sekolah dengan mengedepankan kedisiplinan dan kerja sama tim.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kolom 2: Prestasi Akademik -->
+                <div class="bg-white rounded-2xl p-6 sm:p-7 border border-emerald-900/10 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-900 text-emerald-300 flex items-center justify-center">
+                                <i data-lucide="award" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-lg text-forest-950">Prestasi Sains & Akademik</h3>
+                        </div>
+
+                        <div class="space-y-4">
+                            <!-- Prestasi 2024 -->
+                            <div class="p-5 rounded-2xl bg-gradient-to-br from-emerald-50/80 to-stone-50 border border-emerald-200/70 hover:border-emerald-400 transition-colors">
+                                <div class="flex items-start justify-between gap-4">
+                                    <div>
+                                        <span class="inline-flex items-center gap-1.
